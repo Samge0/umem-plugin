@@ -14,7 +14,7 @@
 
 ## 使用
 
-- 1、下载"UMEM助手" 或者 拉取本项目源码编译（编译后会生成dist目录，在浏览器中"加载已解压的扩展程序"导入该目录即可）；
+- 1、下载"[UMEM助手-v1.0.0-chrome](https://github.com/Samge0/umem-plugin/releases/download/v1.0.0/UMEM-v1.0.0-chrome.zip) " 或者 拉取本项目源码编译（编译后会生成dist目录，在浏览器中"加载已解压的扩展程序"导入该目录即可）；
 
 - 2、在Chrome浏览器中输入[chrome://extensions](chrome://extensions)，并开启开发者模式（点击右上角）；
 
