@@ -1,0 +1,31 @@
+{
+	"manifest_version": 2,
+	"name": "UMEM-友盟登录助手",
+	"description": "一键将友盟登录状态同步更新为UMEM配置的chrome插件",
+	"version": "1.0.0",
+	"browser_action": {
+		"default_title": "UMEM-友盟登录助手",
+		"default_icon": "assets/images/icon48.png",
+		"default_popup": "popup.html"
+	},
+	"permissions": [ "cookies", "tabs", "http://*/*", "https://*/*" ],
+	"background": {
+		"scripts": ["js/background.js", "js/popup.js"]
+	},
+	"icons": {
+		"16": "assets/images/icon16.png",
+		"48": "assets/images/icon48.png",
+		"128": "assets/images/icon128.png"
+	},
+	"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+	"content_scripts": [
+		{
+			"matches": [ "http://*/*", "https://*/*"],
+			"css": ["css/content.css"],
+			"js": ["js/content.js", "js/popup.js"],
+			"run_at": "document_idle"
+		}
+	],
+	"web_accessible_resources": ["js/inject.js"],
+	"persistent": false
+}
