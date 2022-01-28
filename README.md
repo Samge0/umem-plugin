@@ -5,7 +5,9 @@
 
 # UMEM-友盟登录助手
 
-> 一键将友盟登录状态同步更新为 [UMEM](https://github.com/Samge0/UmengEventManage.git) 配置的chrome插件（该插件目前仅支持chrome浏览器）。<br><br>UMEM = UmengEventManage，<br>友盟统计自定义事件多应用一键同步 & 批量处理工具。
+> 一键将友盟登录状态同步更新为 [UMEM](https://github.com/Samge0/UmengEventManage.git) 配置的chrome插件（该插件目前仅支持chrome浏览器）。
+
+> UMEM = UmengEventManage，友盟统计自定义事件多应用一键同步 & 批量处理工具。
 
 ![UMEM-友盟登录助手](screenshots/umem-h1.png)
 
