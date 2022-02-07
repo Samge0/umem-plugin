@@ -113,11 +113,18 @@ export default defineComponent({
       chrome.cookies.getAll({
         domain: 'umeng.com'
       }, (cookies) => {
-        state.form.uc_cookie = cookies.map(c => `${c.name}=${c.value}`).join(';')
+        for (const c of cookies) {
+          if (c.name.search('XSRF-TOKEN') !== -1 && c.domain !== 'mobile.umeng.com') {
+            // 过滤掉cookies中不符合要求的token
+            continue
+          } else {
+            state.form.uc_cookie = `${state.form.uc_cookie}${c.name}=${c.value};`
+          }
+        }
         state.form.uc_cookie.split(';').forEach((item) => {
-          if (item.search('XSRF-TOKEN-HAITANG') !== -1) {
+          if (item.search('XSRF-TOKEN-HAITANG') !== -1 && state.form.uc_token_haitang.length === 0) {
             state.form.uc_token_haitang = item.split('=')[1]
-          } else if (item.search('XSRF-TOKEN') !== -1) {
+          } else if (item.search('XSRF-TOKEN') !== -1 && state.form.uc_token.length === 0) {
             state.form.uc_token = item.split('=')[1]
           }
         });
