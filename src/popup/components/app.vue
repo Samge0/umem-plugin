@@ -113,6 +113,7 @@ export default defineComponent({
       chrome.cookies.getAll({
         domain: 'umeng.com'
       }, (cookies) => {
+        state.form.uc_cookie = ''
         for (const c of cookies) {
           if (c.name.search('XSRF-TOKEN') !== -1 && c.domain !== 'mobile.umeng.com') {
             // 过滤掉cookies中不符合要求的token
