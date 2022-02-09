@@ -94,6 +94,7 @@ export default defineComponent({
 
     /**
      * 获取cookie
+     *    --获取cookie其实主要是更新友盟登录后的 umplus_uc_token 值，其他值是陪衬的
      */
     const getCookie = () => {
       if (!state.domainList || state.domainList.length === 0) {
