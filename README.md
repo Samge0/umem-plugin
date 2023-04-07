@@ -58,3 +58,7 @@ yarn run build
     - [CSDN 15000字大章带你一步一步使用Vue3开发chrome浏览器插件](https://guoqiankun.blog.csdn.net/article/details/112007833)
     - [掘金 15000字大章带你一步一步使用Vue3开发chrome浏览器插件](https://juejin.cn/post/6912295521172324360/)
 
+
+### 技术交流
+- [Join Discord >>](https://discord.com/invite/eRuSqve8CE)
+- WeChat：`SamgeApp`
